@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: rgb(244, 239, 248);
+  height: 140px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 2px rgba(52, 52, 62, 0.4), 0 2px 20px rgba(52, 52, 62, 0.16);
+}
+
+.imageProduct {
+  height: 100%;
+  width: 80px;
+  object-fit: contain;
+}
+
+.propertiesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 210px;
+}
