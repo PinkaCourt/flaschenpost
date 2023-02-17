@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from '../../models/product';
+import { IFlatProduct } from '../../models/product';
 
 @Component({
   selector: 'app-product',
@@ -7,6 +7,6 @@ import { IProduct } from '../../models/product';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  @Input() product: IProduct;
+  @Input() product: IFlatProduct;
   @Input() detailView: boolean;
 }

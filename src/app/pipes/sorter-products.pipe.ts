@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IProduct } from '../models/product';
+import { IFlatProduct } from '../models/product';
 
 @Pipe({
   name: 'sorterProducts',
 })
 export class SorterProductsPipe implements PipeTransform {
-  transform(products: IProduct[], asc: boolean): IProduct[] {
-    return products.slice().sort((a: IProduct, b: IProduct) => {
+  transform(products: IFlatProduct[], asc: boolean): IFlatProduct[] {
+    return products.slice().sort((a: IFlatProduct, b: IFlatProduct) => {
       let left = a;
       let right = b;
 
@@ -15,7 +15,7 @@ export class SorterProductsPipe implements PipeTransform {
         right = a;
       }
 
-      return left.articles[0].price - right.articles[0].price;
+      return left.price - right.price;
     });
   }
 }

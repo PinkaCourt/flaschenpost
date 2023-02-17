@@ -20,6 +20,7 @@
     <app-product
       *ngFor="
         let product of products
+          | flaterProducts
           | sorterProducts : sortedByAsc
           | filterProducts : filter;
         let i = index

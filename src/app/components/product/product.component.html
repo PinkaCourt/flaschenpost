@@ -1,13 +1,13 @@
 <div class="container">
   <img
     class="imageProduct"
-    [src]="product.articles[0].image"
+    [src]="product.image"
     [alt]="product.descriptionText"
   />
 
   <div *ngIf="detailView" class="propertiesContainer">
     <span>{{ product.name }}</span>
-    <span>{{ product.articles[0].price | currency : "EUR" }}</span>
-    <span>{{ product.articles[0].shortDescription }}</span>
+    <span>{{ product.price | currency : "EUR" }}</span>
+    <span>{{ product.shortDescription }}</span>
   </div>
 </div>

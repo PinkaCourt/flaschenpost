@@ -14,3 +14,9 @@ export interface IProduct {
   descriptionText?: string;
   articles: IAarticles[];
 }
+
+export interface IFlatProduct extends IAarticles {
+  brandName: string;
+  name: string;
+  descriptionText?: string;
+}

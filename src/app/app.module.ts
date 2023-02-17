@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { SorterProductsPipe } from './pipes/sorter-products.pipe';
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
+import { FlaterProductsPipe } from './pipes/flater-products.pipe';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FilterProductsPipe } from './pipes/filter-products.pipe';
     ProductComponent,
     SorterProductsPipe,
     FilterProductsPipe,
+    FlaterProductsPipe,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],

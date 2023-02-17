@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IProduct } from '../models/product';
+import { IFlatProduct } from '../models/product';
 import { converter } from '../common/utils';
 
 const lIMIT = 2;
@@ -8,12 +8,12 @@ const lIMIT = 2;
   name: 'filterProducts',
 })
 export class FilterProductsPipe implements PipeTransform {
-  transform(products: IProduct[], filter: boolean): IProduct[] {
+  transform(products: IFlatProduct[], filter: boolean): IFlatProduct[] {
     if (!filter) {
       return products;
     }
     return products.filter(
-      (product) => converter(product.articles[0].pricePerUnitText) > lIMIT
+      (product) => converter(product.pricePerUnitText) > lIMIT
     );
   }
 }
